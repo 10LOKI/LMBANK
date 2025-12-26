@@ -2,6 +2,8 @@
 namespace Entity;
 use DateTime;
 use InvalidArgumentException;
+use Repository\clientRepository;
+
 require_once __DIR__ . '/../Config/dataBase.php';
 class Client
 {
@@ -31,11 +33,11 @@ class Client
     {
         return $this -> email;
     }
-    public function get_id():int
+    public function get_id(): ?int
     {
         return $this -> id;
     }
-    public function get_create_at(): DateTime
+    public function get_created_at(): DateTime
     {
         return $this -> created_at;
     }
