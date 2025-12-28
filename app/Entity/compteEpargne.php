@@ -2,14 +2,14 @@
 namespace Entity;
 use InvalidArgumentException;
 
-class compteEpargne extends Compte
+class CompteEpargne extends Compte
 {
     private float $taux_interet;
 
     public function __construct(int $client_id, string $numero, float $solde = 0 ,float $taux_interet = 0.02 )
     {
         parent::__construct($client_id, $numero, "Epargne" , $solde);
-        $this -> setTauxInteret($tauxInteret);
+        $this -> setTauxInteret($taux_interet);
     }
     public function retirer(float $montant): bool
     {
@@ -33,7 +33,7 @@ class compteEpargne extends Compte
     {
         return $this -> taux_interet;
     }
-    public function setTauxIntert(float $taux_interet) :void
+    public function setTauxInteret(float $taux_interet) :void
     {
         if($taux_interet < 0)
         {

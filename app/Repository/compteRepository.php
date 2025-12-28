@@ -6,7 +6,7 @@ require_once __DIR__ . "/../Entity/compte.php";
 require_once __DIR__ . "/../Entity/compteCourant.php";
 require_once __DIR__ . "/../Entity/compteEpargne.php";
 
-use Entity\Database;
+use Config\Database;
 use Entity\Compte;
 use Entity\CompteCourant;
 use Entity\CompteEpargne; // Correction de la casse si nécessaire

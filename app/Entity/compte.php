@@ -18,16 +18,24 @@ abstract class compte
         $this -> type_compte = $type_compte;
         $this -> solde = $solde;
     }
-    public function get_id():int { return $this -> id;}
+
+    public function get_id(): ?int 
+    {
+        return $this->id;
+    }
     public function get_client_id():int { return $this -> client_id;}
-    public function get_numero():int { return $this -> numero;}
-    public function get_solde():int { return $this -> solde;}
-    public function get_type_compte():int { return $this -> type_compte;}
+    // Changez le type de retour en string
+    public function get_numero(): string 
+    {
+        return (string)$this->numero;
+    }
+    public function get_solde():float { return $this -> solde;}
+    public function get_type_compte():string { return $this -> type_compte;}
 
     public function set_id(int $id): void
     {
         if($id <= 0) throw new InvalidArgumentException("id du compte invalide");
-        $this -> = $id;
+        $this -> id = $id;
     }
 
     public function set_numero(string $numero):void
